@@ -39,11 +39,6 @@ public class InputSearchPopup : PopupWindowContent
         editorWindow.wantsMouseMove = true;
     }
 
-    public override void OnClose()
-    {
-        Debug.Log("CLOSE");
-    }
-
     private void UpdateFilter()
     {
         m_Filtered = m_Axes.Where(s => Regex.IsMatch(s, Regex.Replace(m_Filter, "\\s", "(.*)?"), RegexOptions.IgnoreCase)).ToArray();
